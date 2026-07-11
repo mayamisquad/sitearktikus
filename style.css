@@ -1,0 +1,300 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family:"Segoe UI", Arial, sans-serif;
+  color:#333;
+  background:#fff;
+}
+
+.container {
+  width:1200px;
+  max-width:92%;
+  margin:0 auto;
+}
+
+/* HEADER */
+.header {
+  background:#ff7a00;
+  padding:18px 0;
+}
+
+.header-inner {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.logo { color:#fff; font-weight:600; font-size:22px; }
+
+.nav a {
+  color:#fff;
+  text-decoration:none;
+  margin-left:35px;
+  font-size:21px;
+  transition:.3s;
+}
+
+.nav a:hover { opacity:.85; }
+
+/* HERO */
+.hero {
+  background:url("Окомпании.webp") center/cover no-repeat;
+  min-height:720px;
+}
+
+.hero-overlay {
+  background:rgba(0,0,0,.65);
+  min-height:720px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:100px 20px;
+}
+
+.hero-content {
+  max-width:820px;
+  text-align:center;
+  color:#fff;
+}
+
+.hero h1 { font-size:60px; margin-bottom:40px; }
+.hero p { font-size:20px; line-height:2.1; margin-bottom:25px; }
+
+/* ADVANTAGES */
+.advantages { background:#f3f3f3; padding:110px 0; }
+
+.advantages h2 {
+  text-align:center;
+  font-size:36px;
+  margin-bottom:70px;
+}
+
+.cards {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
+
+.card {
+  background:#fff;
+  padding:50px 35px;
+  text-align:center;
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,.05);
+  transition:.3s;
+}
+
+.card:hover { transform:translateY(-6px); }
+
+/* ICONS */
+.icon-wrapper {
+  width:70px;
+  height:70px;
+  margin:0 auto 25px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.icon {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  filter: invert(48%) sepia(97%) saturate(2350%)
+          hue-rotate(2deg) brightness(100%) contrast(102%);
+}
+
+.icon-hand   { width:135%; height:135%; }
+.icon-truck  { width:135%; height:135%; }
+.icon-wallet { width:125%; height:125%; }
+
+.card h3 {
+  color:#ff7a00;
+  margin-bottom:15px;
+  font-size:20px;
+}
+
+.card p {
+  font-size:15px;
+  color:#555;
+  line-height:2.0;
+  font-weight:600;
+}
+
+/* CONTACTS */
+.contacts { padding:110px 0; text-align:center; }
+
+.contacts h2 { font-size:36px; margin-bottom:55px; }
+
+.contact-card {
+  background:#f3f3f3;
+  max-width:650px;
+  margin:22px auto;
+  padding:24px;
+  border-radius:14px;
+  font-weight:700;
+}
+
+.contact-card span {
+  color:#ff7a00;
+  font-weight:700;
+}
+
+/* FOOTER */
+.footer {
+  background:#ff7a00;
+  color:#fff;
+  padding:28px 0;
+  font-size:14px;
+}
+
+.footer-inner {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.footer-links a {
+  color:#fff;
+  text-decoration:none;
+  margin-right:30px;
+  font-size:19px;
+  transition:.3s;
+}
+
+.footer-links a:hover { opacity:.85; }
+
+/* ================= АДАПТИВ ================= */
+
+/* Планшеты */
+@media (max-width:1024px) {
+  .cards {
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+  }
+
+  .hero h1 { font-size:48px; }
+  .hero p  { font-size:18px; }
+
+  .advantages h2,
+  .contacts h2 { font-size:30px; }
+
+  .nav a { font-size:18px; margin-left:20px; }
+  .logo { font-size:20px; }
+}
+
+/* Маленькие планшеты / большие телефоны */
+@media (max-width:768px) {
+  .header-inner {
+    flex-direction:column;
+    text-align:center;
+    gap:15px;
+  }
+
+  .nav a {
+    margin:0 10px;
+    font-size:16px;
+  }
+
+  .logo { font-size:18px; }
+
+  .hero {
+    min-height:auto;
+  }
+
+  .hero-overlay {
+    min-height:auto;
+    padding:70px 20px;
+  }
+
+  .hero h1 {
+    font-size:36px;
+    margin-bottom:25px;
+  }
+
+  .hero p {
+    font-size:16px;
+    line-height:1.8;
+  }
+
+  .advantages,
+  .contacts {
+    padding:70px 0;
+  }
+
+  .advantages h2,
+  .contacts h2 {
+    font-size:28px;
+    margin-bottom:40px;
+  }
+
+  .cards {
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .card {
+    padding:40px 25px;
+  }
+
+  .footer-inner {
+    flex-direction:column;
+    text-align:center;
+    gap:15px;
+  }
+
+  .footer-links a {
+    margin:0 10px;
+    font-size:16px;
+  }
+}
+
+/* Телефоны */
+@media (max-width:480px) {
+  .logo {
+    font-size:16px;
+  }
+
+  .nav a {
+    font-size:14px;
+    margin:0 6px;
+  }
+
+  .hero h1 {
+    font-size:28px;
+  }
+
+  .hero p {
+    font-size:15px;
+    line-height:1.7;
+  }
+
+  .advantages h2,
+  .contacts h2 {
+    font-size:24px;
+  }
+
+  .card h3 {
+    font-size:18px;
+  }
+
+  .card p {
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  .contact-card {
+    font-size:14px;
+    padding:18px;
+  }
+
+  .footer-links a {
+    display:block;
+    margin:5px 0;
+    font-size:15px;
+  }
+}
